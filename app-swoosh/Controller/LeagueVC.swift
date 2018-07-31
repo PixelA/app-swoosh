@@ -9,6 +9,9 @@
 import UIKit
 
 class LeagueVC: UIViewController {
+    
+    @IBOutlet weak var nextBtn: BorderButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +19,26 @@ class LeagueVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onNextTapped(_ sender: Any) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
+    
+    @IBAction func onMensTapped(_ sender: Any) {
+    }
+    
+    @IBAction func onWomensTapped(_ sender: Any) {
+    }
+    
+    @IBAction func onCoedTapped(_ sender: Any) {
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
